@@ -1,14 +1,18 @@
-# CrankKen
+![CranKen](banner.jpg)
+
+# CranKen
 
 A math puzzle game for the Playdate handheld console, featuring crank-based input for an intuitive solving experience.
 
+**[Play on itch.io](https://geistpro.itch.io/cranken)**
+
 ## About
 
-CrankKen is a digital implementation of math puzzle games, designed specifically for the Playdate's unique hardware. Players solve number puzzles by filling grids with digits while satisfying mathematical cage constraints, using the Playdate's crank for smooth number input.
+CranKen is a digital implementation of math puzzle games, designed specifically for the Playdate's unique hardware. Players solve number puzzles by filling grids with digits while satisfying mathematical cage constraints, using the Playdate's crank for smooth number input.
 
 ## Game Features
 
-- **Multiple Grid Sizes**: Choose from 3x3, 4x4, 5x6, and 6x6 puzzle grids
+- **Multiple Grid Sizes**: Choose from 3x3 up to 9x9 puzzle grids
 - **Crank Controls**: Use the Playdate's crank to cycle through numbers intuitively
 - **Traditional Controls**: Alternative button-based input for number entry
 - **Procedural Generation**: Dynamically generated puzzles with valid solutions
@@ -72,4 +76,4 @@ Kai Kunze
 
 ---
 
-*CrankKen brings classic mathematical puzzle challenges to Playdate with intuitive crank-based controls and procedurally generated gameplay.*
+*CranKen brings classic mathematical puzzle challenges to Playdate with intuitive crank-based controls and procedurally generated gameplay.*
