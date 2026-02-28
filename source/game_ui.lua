@@ -1,4 +1,4 @@
--- User interface rendering for CrankKen puzzle game
+-- User interface rendering for CranKen puzzle game
 -- Handles all drawing functions for different game screens
 
 local pd <const> = playdate
@@ -43,8 +43,8 @@ function GameUI:_draw_title()
     gfx.setFont(system_font)
     
     -- Bold effect: draw twice with slight offset
-    gfx.drawText("CrankKen", 50, 20)
-    gfx.drawText("CrankKen", 50 + TITLE_BOLD_OFFSET, 20)
+    gfx.drawText("CranKen", 50, 20)
+    gfx.drawText("CranKen", 50 + TITLE_BOLD_OFFSET, 20)
 end
 
 --- Draw size selection options (private method)

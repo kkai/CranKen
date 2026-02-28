@@ -1,7 +1,7 @@
-name=CrankKen
+name=CranKen
 author=Kai Kunze
 description=A math puzzle game for Playdate
-bundleID=de.kaikunze.crankken
+bundleID=de.kaikunze.cranken
 version=1.0
 buildNumber=1
 imagePath=images/

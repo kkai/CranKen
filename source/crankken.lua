@@ -9,14 +9,14 @@ import "game_ui"
 local pd <const> = playdate
 local gfx <const> = pd.graphics
 
-class("CrankKen").extends()
+class("CranKen").extends()
 
 -- Game states
 local STATE_SIZE_SELECTION = 1
 local STATE_PLAYING = 2
 local STATE_COMPLETED = 3
 
-function CrankKen:init()
+function CranKen:init()
     -- Initialize game state
     self.state = STATE_SIZE_SELECTION
     self.selected_size = 5  -- Start with 5x5 as middle option
@@ -41,7 +41,7 @@ function CrankKen:init()
     self.grid_offset_y = 0
 end
 
-function CrankKen:update()
+function CranKen:update()
     if self.state == STATE_SIZE_SELECTION then
         self:update_size_selection()
     elseif self.state == STATE_PLAYING then
@@ -51,7 +51,7 @@ function CrankKen:update()
     end
 end
 
-function CrankKen:update_size_selection()
+function CranKen:update_size_selection()
     local new_size, size_changed = self.input:handle_size_selection(self.selected_size)
     
     if size_changed then
@@ -65,7 +65,7 @@ function CrankKen:update_size_selection()
     end
 end
 
-function CrankKen:update_game()
+function CranKen:update_game()
     local new_cell, new_quit_selected, moved, action = self.input:handle_game_input(
         self.selected_cell, 
         self.puzzle.size, 
@@ -95,7 +95,7 @@ function CrankKen:update_game()
     end
 end
 
-function CrankKen:handle_cell_action(action)
+function CranKen:handle_cell_action(action)
     local current_value = self.player_grid[self.selected_cell.x][self.selected_cell.y]
     
     if action == "increment" then
@@ -112,7 +112,7 @@ function CrankKen:handle_cell_action(action)
     self.player_grid[self.selected_cell.x][self.selected_cell.y] = current_value
 end
 
-function CrankKen:handle_puzzle_completion()
+function CranKen:handle_puzzle_completion()
     -- Calculate completion time
     self.completion_time = pd.getCurrentTimeMilliseconds() - self.puzzle_start_time
     
@@ -124,18 +124,18 @@ function CrankKen:handle_puzzle_completion()
     self.ui:draw_completion_popup(self.completion_time)  -- Then draw popup overlay
 end
 
-function CrankKen:update_completed()
+function CranKen:update_completed()
     if pd.buttonJustPressed(pd.kButtonA) then
         self:show_size_selection()
     end
 end
 
-function CrankKen:show_size_selection()
+function CranKen:show_size_selection()
     self.state = STATE_SIZE_SELECTION
     self.ui:draw_size_selection(self.selected_size, self.best_times)
 end
 
-function CrankKen:start_game(size)
+function CranKen:start_game(size)
     self.state = STATE_PLAYING
     self.puzzle = self:generate_puzzle(size)
     self.player_grid = {}
@@ -179,11 +179,11 @@ function CrankKen:start_game(size)
     self.selected_cell = {x = 1, y = 1}
 end
 
-function CrankKen:generate_puzzle(size)
+function CranKen:generate_puzzle(size)
     return self.puzzle_generator:generate_puzzle(size)
 end
 
-function CrankKen:draw_game()
+function CranKen:draw_game()
     -- Start timer on first draw
     if self.puzzle_start_time == 0 then
         self.puzzle_start_time = pd.getCurrentTimeMilliseconds()
@@ -201,7 +201,7 @@ function CrankKen:draw_game()
     )
 end
 
-function CrankKen:check_completion()
+function CranKen:check_completion()
     -- Check if all cells are filled
     for x = 1, self.puzzle.size do
         for y = 1, self.puzzle.size do
@@ -237,7 +237,7 @@ function CrankKen:check_completion()
     return true
 end
 
-function CrankKen:check_cage(cage)
+function CranKen:check_cage(cage)
     local values = {}
     for _, cell in ipairs(cage.cells) do
         table.insert(values, self.player_grid[cell[1]][cell[2]])

@@ -1,4 +1,4 @@
--- Best times management for CrankKen puzzle game
+-- Best times management for CranKen puzzle game
 -- Handles persistent storage of best completion times using Playdate datastore
 
 local pd <const> = playdate

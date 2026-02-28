@@ -1,4 +1,4 @@
--- Input handling for CrankKen puzzle game
+-- Input handling for CranKen puzzle game
 -- Manages crank and button input for size selection and gameplay
 
 local pd <const> = playdate

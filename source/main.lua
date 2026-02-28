@@ -24,5 +24,5 @@ function pd.gameWillTerminate()
 end
 
 -- Initialize the game
-crankken_game = CrankKen()
+crankken_game = CranKen()
 crankken_game:show_size_selection()
