@@ -1,0 +1,9 @@
+name=CrankKen
+author=Kai Kunze
+description=A math puzzle game for Playdate
+bundleID=de.kaikunze.crankken
+version=1.0
+buildNumber=1
+imagePath=images/
+pdxversion=20706
+buildtime=813528269
